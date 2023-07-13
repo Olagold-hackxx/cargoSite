@@ -1,0 +1,8 @@
+{
+    "editor.tabSize": 2,
+    "debug.javascript.defaultRuntimeExecutable": {
+
+
+        "pwa-node": "node"
+    }
+}
