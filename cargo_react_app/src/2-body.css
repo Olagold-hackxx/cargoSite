@@ -1,6 +1,5 @@
 body {
 	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	margin: 0;
 	width: 100%;
 	background-color: white;
 }
@@ -27,11 +26,11 @@ body {
 .pagedetails {
 	position: relative;
 	background-color: white;
-	left: 40px;
+	left: 30px;
 	height: 600px;
 	border: 1px  black;
 	border-radius: 20px;
-	width: 33vw;
+	width: 34vw;
 	display: grid;
 	border: 1px solid grey;
 
@@ -54,26 +53,25 @@ body {
 }
 #upperdiv button {
 	margin-top: 35px;
-	width: 20%;
-	height: 26px;
-	border-radius: 15px;
+	width: 48%;
+	height: 30px;
+	border-radius: 7px;
 	background-color: white;
 	border: 1px solid black;
 }
-@media screen and (max-width: 845px) {
+@media screen and (max-width: 850px) {
 	.pagebkg img {
 		margin-top: -18px;
-		padding: 5%;
 		background-size: contain;
-		height: 290px;
+		height: 39vh;
 		width: 82%;
 		border-radius: 30px;
 	}
 	.pagedetails {
+		left: 18px;
 		margin-top: 60px;
-		margin-left: -2px;
 		width: 82%;
-		height: 250px;
+		height: 35vh;
 	}
 	.pagedetails div{
 		width: 58%;
@@ -126,33 +124,32 @@ article {
 	width: 75%;
 	height: 35px;
 	text-align: center;
-	border-radius: 15px;
+	border-radius: 7px;
 	border: 1px solid black;
 }
 .pagebkg span {
 	color: black;
 	font-family: cursive;
-	position: relative;
+	position: absolute;
 	font-style: italic;
-	left: 36px;
 	top: -79%;
 	font-size: 18px;
 	width: 30%;
 	line-height: 1em;
 	text-align: left;
-	padding-left: 30px;
+	margin-left: 30px;
 }
-@media screen and (max-width: 845px) {
+@media screen and (max-width: 850px) {
 	article {
 		top: 80px;
 		font-size: medium;
+	}
+	.pagebkg span {
+
 	}
 	.pgstart {
 		width: 17rem;
 		margin-left: 10px;
 		border: 1px solid black;
-	}
-	.pagebkg span {
-		top: 0%;
 	}
 }
