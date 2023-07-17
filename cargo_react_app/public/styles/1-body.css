@@ -1,0 +1,29 @@
+body {
+	font-size: medium;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	width: 100%;
+}
+.bodycontainer {
+	display: inline-grid;
+	width: 100%;
+	height: 65rem;
+}
+.background {
+	position: relative;
+	background-image: url(../images/Plane-In-The-Sky-Image.jpg);
+	background-size: 100%;
+	height: 45rem;
+	width: 100%;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+
+.about {
+	position: relative;
+	background-image: url(../images/freight.jpeg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 45%;
+	height: 35rem;
+}
