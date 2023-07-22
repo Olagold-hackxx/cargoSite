@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Jay Cargo </title>
+    <link rel="shortcut icon" href="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="styles/0-footer.css"/>
+		<link rel="stylesheet" href="styles/2-header.css" />
+		<link rel="stylesheet" href="styles/2-body.css" />
+  </head>
+  <body>
+<div class="bodycontainer2">
+	<header class="pageheader">
+		<nav class="menu">
+			<div class="logo">Menu</div>
+			<div class="menu-dropdown">Menu</div>
+			<div class="menu-pages">
+				<div class="menuPopover" id="homepopover" onMouseOver={displayPopover(this.id)} >Home<div>Hello</div></div>
+				<div class="menuPopover" id="servicepopover" onMouseOver={displayPopover(this.id)}>Services<div>Hello</div></div>
+				<div class="menuPopover" id="aboutpopover" onMouseOver={displayPopover(this.id)}>About<div>Hello</div></div>
+				<div class="menuPopover" id="contactpopover" onMouseOver={displayPopover(this.id)}>Contact<div>Hello</div></div>
+			</nav>
+		</div>
+		<div id="popover"></div>
+	</header>
+	<div class="container">
+		<div class="pagebkg">
+			<img alt="Background" src="./images/Aircarg.jpeg"/>
+			<span>
+				<p>Jay Cargo fly and ship packages to anywhere.</p>
+				<p>Let help you deliver your packages</p>
+				<button class="pgstart"><Link to="/signup">Learn More
+					</Link> </button>
+			</span>
+		</div>
+	<div class="pagedetails">
+		<div>
+			<form>
+				<label>Email</label>
+				<input class="login" placeholder="Email"/>
+				<label>Password</label>
+			  <input class="login" placeholder="Password"/>
+		</form>
+			</div>
+		<div id="upperdiv">
+			<form><input class="tracking" placeholder="Track your package"/></form>
+			<p><button class="trackButton">Track</button></p>
+			</div>
+	</div>
+	</div>
+<div class="">
+</div>
+<footer>
+</footer>
+</div>

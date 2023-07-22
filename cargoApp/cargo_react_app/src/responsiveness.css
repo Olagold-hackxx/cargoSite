@@ -1,0 +1,146 @@
+@media screen and (max-width: 850px) {
+	.pagebkg {
+		display: flex;
+		max-width: 90vh;
+	}
+	.pagebkg img {
+		background-size: contain;
+		height: 39vh;
+		width: 100%;
+		padding: 12px;
+		border-radius: 30px;
+	}
+	.pagedetails {
+		margin-top: 30px;
+		width: 92%;
+		margin-left: -20px;
+		--bs-card-height: 600px;
+	}
+
+	.bodycontainer {
+		display: grid;
+		align-items: center;
+		height: 250px;
+	}
+	.pgstart {
+		margin-left:-49px;
+	}
+	.pagedetails {
+		padding: 5px;
+	}
+	.pagebkg span {
+		top: 14vh;
+		position: relative;
+		left: -76%;
+		width: 55%;
+		line-height: 1em;
+		text-align: left;
+		font-size: 1em;
+		color: aliceblue;
+	}
+	.pagebkg span h4 {
+		font-size: 18px;
+	}
+	.pgstart {
+		padding: 4px;
+		color: aliceblue;
+		width: 17rem;
+	}
+	.pgheader {
+		height: 15rem;
+		display: grid;
+	}
+	#lowerdiv {
+		display: none;
+	}
+	.pgdiv {
+		margin-left: 5px;
+		width: 95%;
+		height: 8rem;
+	}
+	.quotebutton {
+		width: 70%;
+		height: 35px;
+		position: relative;
+
+	}
+	#trackingdiv {
+		padding-top: 20%;
+		height: 88%;
+	}
+	.tracking {
+		margin-top: 20px;
+		margin-left: -54px;
+		width: 13em;
+	}
+	.quotediv {
+		height: 85%;
+	}
+	.trackButton {
+		margin-left: -32px;
+	}
+	.schedulebutton {
+		width: 12em;
+	}
+	.formstyle
+	{
+		padding-left: 80px;
+	}
+
+	@media screen and (min-width: 600px) {
+
+		.pagedetails {
+			height: 50em;
+			width: 97%;
+			padding: 20px;
+		}
+		.pgstart {
+			width: 24rem;
+		}
+		.pagebkg img {
+			height: 400px;
+			width: 100%;
+		}
+		.pagebkg span {
+			font-size: 1em;
+			top: 185px;
+		}
+		.tracking {
+			position: relative;
+			top: -70px;
+			width: 26em;
+		}
+		.trackButton {
+			position: relative;
+			top: -30px;
+		}
+		.pgheader {
+			display: flex !important;
+			height: 50%;
+		}
+		.pgdiv {
+			height: 21em !important;
+		}
+		#lowerdiv {
+			display: grid !important;
+			margin-left: 10px;
+			height: 80%;
+		}
+		.quotediv {
+			height: 80%;
+		}
+	}
+	.auth-inner {
+		margin-top: 30px;
+		width: 89vw;
+	}
+	.menu-pages {
+		display: none;
+	}
+	#menu-dropdown {
+		display: flex !important;
+	}
+	.navbar {
+		height: 5rem;
+	}
+}
