@@ -1,0 +1,94 @@
+body {
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	width: 100%;
+}
+.bodycontainer {
+	display: inline-grid;
+	width: 100%;
+}
+.background {
+	position: relative;
+	background-image: url(./images/Aircarg.jpeg);
+	background-size: 100%;
+	height: 45em;
+	background-repeat: no-repeat;
+	margin: 0;
+
+}
+
+@media screen and (max-width: 550px) {
+	.background {
+		background-image: url(./images/Aircargcrop1.jpeg);
+		background-size: contain;
+		height: 19em;
+		width: 100%;
+	}
+}
+
+.about {
+	position: relative;
+	background-color: #708099;
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 800;
+	line-height: 1em;
+}
+.intro {
+	size: 1vh;
+	position: relative;
+	top: 20%;
+	text-align: center;
+	font-size: larger;
+	color: white;
+}
+.intro h3 {
+	font-size: 2rem;
+}
+@media screen and (max-width: 550px) {
+	.intro {
+		top: 115px;
+		font-size: small;
+		color: white;
+	}
+	.intro h3 {
+		font-size: medium;
+	}
+
+}
+
+.start {
+	border-radius: 6px;
+	width: 16rem;
+	text-align: center;
+	height: 38px;
+	font-size: large;
+	color: white;
+	cursor: pointer;
+}
+.service {
+	display: flex;
+	background-color: #708099;
+
+}
+.service div {
+	width: 100%;
+	height: 100%;
+}
+.service div img {
+	width: 100%;
+	background-size: auto;
+	height: 20rem;
+	border-radius: 20px;
+}
+
+.service div {
+	margin: 20px;
+	text-align: center;
+}
+.service div ul {
+	text-align: left;
+}
