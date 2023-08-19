@@ -1,8 +1,11 @@
 import { Form, Button } from "react-bootstrap";
+import PageHeader from "./header";
 
 
 export default function SignupPage () {
 	return (
+		<>
+		<PageHeader/>
 		<div className="bodycontainer2 ">
 
 		<div className="auth-wrapper">
@@ -54,5 +57,6 @@ export default function SignupPage () {
 			</div>
 			</div>
 			</div>
+			</>
 	)
 }

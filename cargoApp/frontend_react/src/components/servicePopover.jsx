@@ -1,11 +1,11 @@
 export default function ServicePopover () {
 	return (
 		<>
-		<ul>
+		<ul><h4>Service</h4>
 		<li>Freight Forwarding</li>
 		<li>Air Cargo</li>
-		<li>Ship Cargo</li>
-		<li>Packages and Containers Tracking</li>
+		<li>Maritime Transport</li>
+		<li>Cargo and Containers Tracking</li>
 		<li></li>
 		</ul>
 		</>

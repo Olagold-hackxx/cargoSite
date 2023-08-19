@@ -9,7 +9,7 @@ export default function MenuDropdown () {
   const handleShow = () => setShow(true);
 	return (
 		<div id="menu-dropdown">
-			<div className="navbar-toggler-icon" onClick={handleShow}></div>
+			 <div className="navbar-toggler-icon " onClick={handleShow}></div>
 					<Offcanvas show={show} onHide={handleClose}>
               <Offcanvas.Header closeButton>
               </Offcanvas.Header>

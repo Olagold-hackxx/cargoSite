@@ -1,13 +1,14 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import PageHeader from "./components/header";
 
 
 
 function Home () {
 		return (
+			<>
+			<PageHeader/>
 	<div class="bodycontainer2">
-
 				<div class="background">
 				<article class="intro">
 				<h3>WELCOME TO JAY CARGO</h3>
@@ -33,7 +34,7 @@ function Home () {
 			<footer>
 			</footer>
 	</div>
-
+			</>
   );
 }
 

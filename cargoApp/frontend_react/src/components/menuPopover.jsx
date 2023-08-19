@@ -16,7 +16,7 @@ export default function MenuPopover ({name}) {
 
 	return (
 		<div>
-		<Accordion defaultActiveKey="0" className="accord" >
+		<Accordion defaultActiveKey="0" >
 				<Accordion.Header >
 					{name}
 				</Accordion.Header>

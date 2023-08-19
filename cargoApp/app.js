@@ -1,12 +1,7 @@
-const http = require('http');
+const express = require('express')
+const app = express()
 
-const server = http.createServer((req, res) => {
-	if (req.url === "/") {
-		res.end('Welcome to homepage');
-	}
-	if (req.url === "/signup") {
-		res.end('Welcome to signup page');
-	}
-});
+app.get()
 
-server.listen(5000);
+
+app.listen(5000)

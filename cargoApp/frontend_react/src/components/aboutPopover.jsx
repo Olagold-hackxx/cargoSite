@@ -1,12 +1,11 @@
 export default function AboutPopover () {
 	return (
 		<>
-		<ul>
-		<li>Freight Forwarding</li>
+		<ul><h4>About Us</h4>
+		<li></li>
 		<li>Air Cargo</li>
 		<li>Ship Cargo</li>
 		<li>Packages and Containers Tracking</li>
-		<li></li>
 		</ul>
 		</>
 	);

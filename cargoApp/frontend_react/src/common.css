@@ -78,12 +78,12 @@ h1 {
 	border: 1px black;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: grey;
+	background-color: rgb(220, 220, 220);
 }
 
 .login {
 	margin-top: -50px;
-  border-radius: 5px;
+    border-radius: 5px;
 	height: 25px;
 	border: 1px solid black;
 }
@@ -151,10 +151,6 @@ h1 {
 	height: 88%;
 }
 
-.accordion:hover div{
-	display:block !important;
-}
-
 
 .quote span {
 	font-size: 18px;
@@ -166,7 +162,7 @@ h1 {
 	bottom: -20px;
 }
 .shadow {
-box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .col-8 {
 	padding-bottom: 10px;
@@ -183,7 +179,7 @@ box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.15) !important;
 
 .quotebutton {
 	height: 35px;
-	width: 120px;
+	width: fit-content;
 }
 .home {
 	padding-top: 15px;
@@ -195,7 +191,7 @@ box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.15) !important;
 .auth-inner {
   width: 450px;
   margin: auto;
-	background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
@@ -229,20 +225,25 @@ box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.15) !important;
   text-align: right;
   font-size: 13px;
   padding-top: 10px;
-  color: #7f7d7d;
+  color: #167bff;
   margin: 0;
 }
 
-.forgot-password a {
-  color: #167bff;
-}
 h3 {
 	color: black;
 	text-align: center;
 	font-family:'Gill Sans';
-	font-weight: 600;
+
+}
+.accordion::after div {
+	display: none;
 }
 
 .modalstyle {
 	padding-left: 15px;
 }
+input:focus {
+    outline: none !important;
+    border:1px solid #0d6efd;
+    box-shadow: 0 0 10px #719ECE ;
+  }

@@ -1,12 +1,12 @@
 export default function ContactPopover () {
 	return (
 		<>
-		<ul>
-		<li>Freight Forwarding</li>
-		<li>Air Cargo</li>
-		<li>Ship Cargo</li>
-		<li>Packages and Containers Tracking</li>
-		<li></li>
+		<ul><h4>Contact Us</h4>
+		<li>Book Appointment</li>
+		<li>Email us</li>
+		<li>Facebook</li>
+		<li>WhatsApp</li>
+		<li>Instagram</li>
 		</ul>
 		</>
 	);

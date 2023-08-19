@@ -3,7 +3,7 @@ import Aircarg from './images/Aircarg.jpeg';
 import LoginModal from "./components/loginModal";
 import { useState } from "react";
 import { Card, Button } from "react-bootstrap";
-
+import PageHeader from "./components/header";
 
 	function Page () {
 		const [show, setShow] = useState(false);
@@ -20,6 +20,8 @@ import { Card, Button } from "react-bootstrap";
 			return refname;
 		}
   return (
+		<>
+		<PageHeader/>
 		<div className="bodycontainer2">
 				<div className="bodycontainer">
 					<div className="pagebkg">
@@ -40,8 +42,8 @@ import { Card, Button } from "react-bootstrap";
                 <Button className="quotebutton" onClick={() => {handleShow(); handleRefname("get a quote")}}>Get a quote </Button> <LoginModal refname={refname} show={show} handler={() => {handleClose(); handleRefname();}}/></p>
 							</div>
 							<div className="shadow pgdiv" id="lowerdiv">
-							<div className="quote" ><span><h3 className="text-break fs-4">Check available flights and ships schedules</h3></span></div>
-								<p className="text-wrap"><Button className="schedulebutton" onClick={() => {handleShow(); handleRefname("check schedules");}}>Schedules</Button> <LoginModal refname={refname} show={show} handler={() => {handleClose(); handleRefname();}}/> </p>
+							<div className="quote" ><span><h3 className="text-break fs-4">Book a call with our agents</h3></span></div>
+								<p className="text-wrap"><Button className="schedulebutton" onClick={() => {handleShow(); handleRefname("check schedules");}}>Book</Button> <LoginModal refname={refname} show={show} handler={() => {handleClose(); handleRefname();}}/> </p>
 							</div>
 							</Card.Header>
 							<Card.Body className="cardbody" >
@@ -58,7 +60,7 @@ import { Card, Button } from "react-bootstrap";
 			<footer>
 			</footer>
 	</div>
-
+		</>
   );
 }
 export default Page;

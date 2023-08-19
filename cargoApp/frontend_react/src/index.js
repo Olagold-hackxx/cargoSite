@@ -4,11 +4,11 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import  'react-bootstrap/dist/react-bootstrap';
-import './0-footer.css';
-import './1-body.css'
+import './footer.css';
+import './body.css'
 import './common.css';
 import './header.css';
-import './responsiveness.css'
+import './responsiveness.css';
 
 
 
