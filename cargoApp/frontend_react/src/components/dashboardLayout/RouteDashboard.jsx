@@ -7,7 +7,7 @@ export default function routeDashboard () {
 
 	const route =  [AccountDashboard, PriceDashboard]
 	return (
-
+		{route}
 	);
 
 }

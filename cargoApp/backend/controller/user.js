@@ -1,7 +1,7 @@
 #!/usr/bin/node
+const database = require('./database/dbController');
+const User = require('../models/User');
 
-const express = require('express');
-const app = express();
-
-
-app.get("/api/user", (req, res))
+export const getAllUser = async () => {
+	const user = new database(User);
+}
