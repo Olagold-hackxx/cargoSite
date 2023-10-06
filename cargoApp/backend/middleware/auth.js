@@ -1,6 +1,6 @@
 const CustomError = require('../errors');
 const { isTokenValid } = require('../utils');
-const Cookie = require('../models/Cookies');
+const Token = require('../models/Token');
 const { attachCookiesToResponse } = require('../utils');
 const authenticateUser = async (req, res, next) => {
   const { refreshToken, accessToken } = req.signedCookies;
@@ -13,7 +13,7 @@ const authenticateUser = async (req, res, next) => {
     }
     const payload = isTokenValid(refreshToken);
 
-    const existingToken = await Cookie.findOne({
+    const existingToken = await Token.findOne({
       user: payload.user.userId,
       refreshToken: payload.refreshToken,
     });

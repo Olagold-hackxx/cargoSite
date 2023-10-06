@@ -41,6 +41,20 @@ const user = new mongoose.Schema({
 			type: ObjectId,
 			ref: "Shipment"
 },
+verificationToken: String,
+  isVerified: {
+    type: Boolean,
+    default: false,
+  },
+  verified: Date,
+  passwordToken: {
+    type: String,
+  },
+  passwordTokenExpirationDate: {
+    type: Date,
+  },
+  isGoogleUser: { type: Boolean, default: false },
+
 
 
 }, {timestamps: true});

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const CookieSchema = new mongoose.Schema(
+const TokenSchema = new mongoose.Schema(
   {
-    refreshCookie: { type: String, required: true },
+    refreshToken: { type: String, required: true },
     ip: { type: String, required: true },
     userAgent: { type: String, required: true },
     isValid: { type: Boolean, default: true },
@@ -15,4 +15,4 @@ const CookieSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('Cookie', CookieSchema);
+module.exports = mongoose.model('Token', TokenSchema);
