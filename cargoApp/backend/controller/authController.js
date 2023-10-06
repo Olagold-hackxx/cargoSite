@@ -64,10 +64,10 @@ const sendVerificationEmail = async (req, res) => {
     const verificationToken = crypto.randomBytes(10).toString("hex");
 
     // save created token to db
-    await TokenModel.create({
+    await UserModel.findOneAndUpdate({
       userId: user._id,
-      token: verificationToken,
-      createdAt: Date.now()
+	}, {
+	verificationToken,
     });
 
     // send verification email
