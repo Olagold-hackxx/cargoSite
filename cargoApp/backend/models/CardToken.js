@@ -24,6 +24,6 @@ const CardTokenSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: "user", required: true },
 });
 
-const CardTokenModel = mongoose.model("payment token", CardTokenSchema);
+const CardTokenModel = mongoose.model("CardToken", CardTokenSchema);
 
 module.exports = CardTokenModel;

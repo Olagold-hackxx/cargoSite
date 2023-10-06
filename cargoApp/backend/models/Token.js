@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const TokenSchema = new mongoose.Schema(
+const token = new mongoose.Schema(
   {
     refreshToken: { type: String, required: true },
     ip: { type: String, required: true },
@@ -15,4 +15,4 @@ const TokenSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('Token', TokenSchema);
+module.exports = mongoose.model('Token', token);
