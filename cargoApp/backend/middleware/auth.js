@@ -1,37 +1,41 @@
 const CustomError = require('../errors');
-const { isTokenValid } = require('../utils/jwt');
-
+const { isTokenValid } = require('../utils');
+const Cookie = require('../models/Cookies');
+const { attachCookiesToResponse } = require('../utils');
 const authenticateUser = async (req, res, next) => {
-  let token;
-  // check header
-  const authHeader = req.headers.authorization;
-  if (authHeader && authHeader.startsWith('Bearer')) {
-    token = authHeader.split(' ')[1];
-  }
-  // check cookies
-  else if (req.cookies.token) {
-    token = req.cookies.token;
-  }
+  const { refreshToken, accessToken } = req.signedCookies;
 
-  if (!token) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
-  }
   try {
-    const payload = isTokenValid(token);
+    if (accessToken) {
+      const payload = isTokenValid(accessToken);
+      req.user = payload.user;
+      return next();
+    }
+    const payload = isTokenValid(refreshToken);
 
-    // Attach the user and his permissions to the req object
-    req.user = {
-      userId: payload.user.userId,
-      role: payload.user.role,
-    };
+    const existingToken = await Cookie.findOne({
+      user: payload.user.userId,
+      refreshToken: payload.refreshToken,
+    });
 
+    if (!existingToken || !existingToken?.isValid) {
+      throw new CustomError.UnauthenticatedError('Authentication Invalid');
+    }
+
+    attachCookiesToResponse({
+      res,
+      user: payload.user,
+      refreshToken: existingToken.refreshToken,
+    });
+
+    req.user = payload.user;
     next();
   } catch (error) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
+    throw new CustomError.UnauthenticatedError('Authentication Invalid');
   }
 };
 
-const authorizeRoles = (...roles) => {
+const authorizePermissions = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
       throw new CustomError.UnauthorizedError(
@@ -42,4 +46,7 @@ const authorizeRoles = (...roles) => {
   };
 };
 
-module.exports = { authenticateUser, authorizeRoles };
+module.exports = {
+  authenticateUser,
+  authorizePermissions,
+};

@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const UserModel = require("../new/models/user");
 const crypto = require("crypto");
-const TokenModel = require("../models/token");
+const TokenModel = require("../models/Token");
 const sendEmail = require("../utils/sendEmail");
 const passwordMiddleware = require("../middleware/validators/passwordMiddleware")
 
