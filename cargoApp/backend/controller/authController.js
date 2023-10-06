@@ -1,9 +1,9 @@
 const bcrypt = require("bcrypt");
-const UserModel = require("../models/user");
+const UserModel = require("../new/models/user");
 const crypto = require("crypto");
 const TokenModel = require("../models/token");
 const sendEmail = require("../utils/sendEmail");
-const passwordMiddleware = require("../middlewares/passwordMiddleware")
+const passwordMiddleware = require("../middleware/validators/passwordMiddleware")
 
 const registerClient = async (req, res) => {
   try {
