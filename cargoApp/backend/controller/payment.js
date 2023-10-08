@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 const callPaystackApi = require("../utils/paystack");
-const CardTokenModel = require("../models/cardToken");
+const CardTokenModel = require("../models/CardToken");
 
 require("dotenv").config();
 

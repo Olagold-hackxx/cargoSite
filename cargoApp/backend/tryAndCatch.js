@@ -1,6 +1,6 @@
 async function tryAndCatch(data) {
   try {
-    data()
+    await data()
   } catch (error) {
     console.log(error);
   }

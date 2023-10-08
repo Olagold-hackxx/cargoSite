@@ -3,10 +3,8 @@ const mongoose = require('mongoose');
 const token = new mongoose.Schema(
   {
     refreshToken: { type: String, required: true },
-    ip: { type: String, required: true },
-    userAgent: { type: String, required: true },
     isValid: { type: Boolean, default: true },
-    user: {
+    userId: {
       type: mongoose.Types.ObjectId,
       ref: 'User',
       required: true,
@@ -15,4 +13,5 @@ const token = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('Token', token);
+const TokenModel = mongoose.model('Token', token);
+module.exports = TokenModel;

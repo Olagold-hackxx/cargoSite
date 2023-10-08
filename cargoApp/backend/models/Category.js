@@ -4,7 +4,7 @@ const category = new mongoose.Schema({
 	name: {
 		type: String,
 		trim: true,
-		required: [true, 'Please add your first name'],
+		required: [true, 'Please add category name'],
 		maxlength: 256
 	},
 	minPricePerKg: {
@@ -19,4 +19,5 @@ const category = new mongoose.Schema({
 	},
 }, {timestamps: true});
 
-module.exports = mongoose.model("Package Category", category);
+const CategoryModel = mongoose.model("Package Category", category);
+module.exports = CategoryModel;

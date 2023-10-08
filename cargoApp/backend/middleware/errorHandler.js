@@ -34,6 +34,11 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 	  customError.msg = `No item found with id : ${err.value}`;
 	  customError.statusCode = 404;
 	}
+	else {
+		customError.msg = err;
+		console.log(err)
+	  customError.statusCode = 404;
+	}
 
 	return res.status(customError.statusCode).json({ msg: customError.msg });
   };

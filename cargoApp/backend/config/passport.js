@@ -1,20 +1,8 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const jwt = require("jsonwebtoken");
-const UserModel = require("../new/models/user");
-
-/**
- * generate an access token for user
- * @param {string} userId : id of user
- * @param {*string} email : email of user
- * @returns
- */
-const signToken = (userId, email) => {
-  // sign access token
-  return jwt.sign({ id: userId, email: email }, process.env.ACCESS_SECRET, {
-    expiresIn: process.env.ACCESS_EXPIRES_IN,
-  });
-};
+const { createJWT } = require("../utils/index");
+const User = require("../models/User");
+const Token = require("../models/Token");
 
 passport.use(
   new GoogleStrategy(
@@ -26,24 +14,38 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       try {
         // return access token if user already exists
-        const userExists = await UserModel.findOne({
+        const userExists = await User.findOne({
           email: profile._json.email,
         });
         if (userExists) {
-          const token = signToken(userExists._id, userExists.email);
+          // generate an jwt token for user
+		  const payload = {_id: userExists._id, email: userExists.email};
+          const token = createJWT(payload);
+
+          if (refreshToken) {
+              await Token.updateOne({ user: userExists._id },{
+                refreshToken,
+              });
+          }
           return done(null, token);
         }
 
         // save user to db and return access token if user does not exist
-        const user = await UserModel.create({
+        const user = await User.create({
           email: profile._json.email,
           firstName: profile._json.given_name,
           lastName: profile._json.family_name,
-          isEmailVerified: true,
+          isVerified: true,
+          username: profile._json.given_name,
           isGoogleUser: true,
+		  password: undefined,
         });
 
-        const token = signToken(user._id, user.email);
+        const token = createJWT({_id: user._id, email: user.email});
+		await Token.create({
+			refreshToken,
+			userId: user._id,
+		  });
         return done(null, token);
       } catch (err) {
         return done(err, false);

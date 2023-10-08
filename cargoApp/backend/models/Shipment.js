@@ -19,12 +19,18 @@ const shipment = new mongoose.Schema({
 		trim: true,
 		required: [false]
 	},
-	category: {
+	userId: {
+		type: mongoose.Types.ObjectId,
+		ref: 'User',
+		required: true,
+	  },
+	package: {
 		type: ObjectId,
 		ref: "Package Category",
-		required: [true, "Package must belong to a category"]
+		required: [true, "Shipment must have at least one package"]
 
 	}
 }, {timestamps: true});
 
-module.exports = mongoose.model("Shipment", shipment)
+const ShipmentModel = mongoose.model("Shipment", shipment);
+module.exports = ShipmentModel;

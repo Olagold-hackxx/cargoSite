@@ -21,4 +21,5 @@ const package = new mongoose.Schema({
 	}
 }, {timestamps: true});
 
-module.exports = mongoose.model("Package", package);
+const PackageModel = mongoose.model("Package", package);
+module.exports = PackageModel;

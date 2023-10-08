@@ -4,7 +4,7 @@ const validateRegisterClient = {
   body: Joi.object({
     lastName: Joi.string().required(),
     firstName: Joi.string().required(),
-    mobileNumber: Joi.string().required(),
+    username: Joi.string().required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(8).required(),
   }),
